@@ -14,7 +14,7 @@ class StepIcon extends Component {
           borderRadius: 20,
           backgroundColor: this.props.activeStepIconColor,
           borderColor: this.props.activeStepIconBorderColor,
-          borderWidth: 5,
+          borderWidth: 3,
           bottom: 2,
         },
         circleText: {
@@ -60,11 +60,14 @@ class StepIcon extends Component {
           width: 36,
           height: 36,
           borderRadius: 18,
-          backgroundColor: this.props.completedStepIconColor,
+          borderColor: '#898A8D',
+          borderWidth: 3,
+          // bottom:2,
+          backgroundColor: 'white',
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
+          top: 16 / 3,
         },
         labelText: {
           textAlign: 'center',
@@ -106,11 +109,15 @@ class StepIcon extends Component {
           width: 36,
           height: 36,
           borderRadius: 18,
-          backgroundColor: this.props.disabledStepIconColor,
+          // backgroundColor: this.props.disabledStepIconColor,
+          borderColor: '#898A8D',
+          borderWidth: 3,
+          // bottom:2,
+          backgroundColor: 'white',
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
+          top: 16 / 3,
         },
         labelText: {
           textAlign: 'center',
@@ -153,7 +160,7 @@ class StepIcon extends Component {
         <View style={styles.circleStyle}>
           <Text style={styles.circleText}>
             {this.props.isCompletedStep ? (
-              <Text style={{ color: this.props.completedCheckColor }}>&#10003;</Text>
+              <Text style={{ color: '#898a8d' }}>{this.props.stepNum}</Text>
             ) : (
               <Text style={styles.stepNum}>{this.props.stepNum}</Text>
             )}
